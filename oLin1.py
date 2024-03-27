@@ -67,8 +67,9 @@ def display_menu():
         + """\033[36m
     \033[36m[+] \033[32mThis Tool Must Run as a Root..\033[36m[+]\033[32m
     [00] \033[36mMITM \033[32m
-    [01] \033[36mInformation Gathering \033[32m
-
+    [01] \033[36mAnonsurf \033[32m
+    [02] \033[36mXXStrike\033[32m
+    [03] \033[36mxerosploit \033[32m
     [99] \033[36mExit
     """
     )
@@ -96,10 +97,10 @@ def main():
         elif choice == "1" or choice == "01":
             print(anonsurf)
             anonsurf()
-        # elif choice == "2" or choice == "02":
-        #     run_tool2()
-        # elif choice == "3" or choice == "03":
-        #     run_tool2()
+        elif choice == "2" or choice == "02":
+            xsstrike()
+        elif choice == "3" or choice == "03":
+            xerosploit()
         # elif choice == "4" or choice == "04":
         #     run_tool2()
         elif choice == "99":
@@ -129,8 +130,15 @@ def mitm():
 
 def anonsurf():
     # Function to run tool 2
-    os.system("python modules/anonsurf.py")
+    os.system("python3 modules/anonsurf.py")
 
+def xsstrike():
+    # Function to run tool 2
+    os.system("python3 modules/XSStrike.py")
+
+def xerosploit():
+    # Function to run tool 2
+    os.system("python3 modules/xerosploit.py")
 
 if __name__ == "__main__":
     main()
